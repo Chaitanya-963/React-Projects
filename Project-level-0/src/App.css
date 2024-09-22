@@ -1,42 +1,120 @@
-#root {
-  max-width: 1280px;
+@import url("https://fonts.googleapis.com/css?family=Poppins:ital, wght@0,100;0,200;0,300;0,400;0,500;0,600 0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --r: red;
+  --g: #808080; 
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  /* background: rgb(164, 81, 81); */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+.logo img {
+  width: 4vw;
+}
+
+nav ul {
+  color: var(--g);
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+/* Hero Section */
+
+.container {
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 1280px;
+}
+.hero {
+  /* background: rgb(70, 45, 45); */
+  display: flex;
+  height: calc(100vh - 72px);
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero h1{
+  text-transform: uppercase;
+  line-height: 130px;
+  color: black;
+  font-weight: 800;
+  font-size: 9.5vw;
+}
+.hero p{
+  font-weight: 600;
+  width: 30vw;
+  font-size: 1.2vw;
+  color: var(--g);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.hero-img img{
+  width: 500px;
+  /* background: #000; */
+  margin-right: 35px;
 }
 
-.card {
-  padding: 2em;
+.hero-btn {
+  display: flex;
+  gap: 25px;
 }
 
-.read-the-docs {
-  color: #888;
+.hero-btn button {
+  all: unset;
+  padding: 3px 10px;
+  background: var(--r);
+  height: 32px;
+  font-size: 1vw;
+  color: white;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.hero-btn .price {
+  all: unset;
+  background: transparent;
+  font-size: 1vw;
+  padding: 3px 20px;
+  border: 1.5px solid var(--r);
+  border-radius: 15px;
+  height: 32px;
+  color: var(--g);
+  font-weight: 500;
+}
+
+.social-media {
+  display: flex;
+  gap: 16px;
+}
+
+.social-media img {
+  width: 2vw;
 }
